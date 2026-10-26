@@ -20,4 +20,7 @@ int udp_bind(int sock, uint16_t port); // lie la socket à un port local
 
 int udp_make_addr(struct sockaddr_in *addr, const char* ip, uint16_t port); // remplit une @ de desti à partir d'une IP texte et d'un port
 int udp_send(int sock, const struct sockaddr_in *dst, const uint8_t *buf, size_t len); // envoie un datagramme
+int udp_recv(int sock, uint8_t *buf, size_t buf_size, struct sockaddr_in *from); // reçoit un datagramme et mémorise l'expéditeur
+int udp_set_timeout(int sock, int ms); // fixe le délai maximal d'attente de udp_recv (base du temporisateur)
+
 #endif
