@@ -3,7 +3,7 @@
 SecureFlow-FEC est un protocole applicatif client-serveur de transfert de fichiers opérant au-dessus de sockets UDP. 
 Le projet suit le parcours d’un paquet, de l’envoi à la réception. 
 
-## Technologies
+## Langage de programmation
 
 C
 
