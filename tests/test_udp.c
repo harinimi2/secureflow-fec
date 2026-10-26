@@ -1,8 +1,8 @@
 /**
- * @file test_pack.c
+ * @file test_udp.c
  * @author Harini MINA
  * @brief Pour tester les fonctions de udp_socket.c. Ce test a été généré par l'IA
- * @date 2026-10-25
+ * @date 2026-10-26
  */
 #include <stdio.h>
 #include <string.h>
