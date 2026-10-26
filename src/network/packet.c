@@ -1,5 +1,5 @@
 /**
- * @file packet.h
+ * @file packet.c
  * @author Harini MINA
  * @brief implémentation des opérations sur les paquets : encapsulation et désencapsulation
  * @date 2026-10-25
