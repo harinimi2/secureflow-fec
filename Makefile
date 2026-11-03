@@ -20,6 +20,9 @@ test_udp: tests/test_udp.c $(SRC_NET) $(HDRS)
 test_transfer: tests/test_transfer.c $(SRC_ALL) $(HDRS)
 	$(CC) $(CFLAGS) -o $@ tests/test_transfer.c $(SRC_ALL)
 
+test_crc32: tests/test_crc32.c src/fec/crc32.c src/fec/crc32.h
+	$(CC) $(CFLAGS) -o $@ tests/test_crc32.c src/fec/crc32.c
+
 client: src/network/client_main.c $(SRC_ALL) $(HDRS)
 	$(CC) $(CFLAGS) -o $@ src/network/client_main.c $(SRC_ALL)
 
@@ -30,8 +33,9 @@ test: test_pack test_udp test_transfer
 	./test_pack
 	./test_udp
 	./test_transfer
+	./test_crc32
 
 clean:
-	rm -f test_pack test_udp test_transfer client server tmp_original.bin tmp_recu.bin
+	rm -f test_pack test_udp test_transfer test_crc32 client server tmp_original.bin tmp_recu.bin
 
 .PHONY: all test clean
